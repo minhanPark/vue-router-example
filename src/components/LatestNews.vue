@@ -3,8 +3,21 @@
 </template>
 
 <script>
-export default {};
+import { getLatestNews } from "../api";
+
+export default {
+  data() {
+    return {
+      datas: [],
+    };
+  },
+  async created() {
+    const {
+      data: { articles },
+    } = await getLatestNews();
+    this.datas = articles;
+  },
+};
 </script>
 
-<style>
-</style>
+<style></style>
