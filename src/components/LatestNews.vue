@@ -8,15 +8,13 @@ import { getLatestNews } from "../api";
 export default {
   data() {
     return {
-      datas: [],
+      datas: []
     };
   },
   async created() {
-    const {
-      data: { articles },
-    } = await getLatestNews();
-    this.datas = articles;
-  },
+    const datas = await getLatestNews();
+    this.datas = datas;
+  }
 };
 </script>
 
