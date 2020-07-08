@@ -1,7 +1,7 @@
 <template>
   <div class="wrapper">
-    <input v-model="inputValue" />
-    <button v-on:click="handleClick">검색</button>
+    <input v-model="inputValue" v-on:keyup.enter="handleInputValue" placeholder="뉴스 검색어를 입력하세요." />
+    <button v-on:click="handleInputValue">검색</button>
   </div>
 </template>
 
@@ -13,7 +13,7 @@ export default {
     };
   },
   methods: {
-    handleClick() {
+    handleInputValue() {
       const value = this.inputValue;
       if (value) {
         this.$emit("get-data", value);

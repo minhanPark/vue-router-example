@@ -52,3 +52,9 @@ new Vue({
 
 마지막으로는 App.vue에 router-link태그와 router-view태그를 사용하면 연결한 라우터가 나타난다.
 
+## 완성된 예제 모습
+
+![최신뉴스 보기](https://user-images.githubusercontent.com/29043491/86934733-035e4480-c177-11ea-96e9-fef6aa41e5ac.PNG)  
+![뉴스 검색](https://user-images.githubusercontent.com/29043491/86934738-048f7180-c177-11ea-85ad-8d870bfa7877.PNG)  
+
+> [뉴스api](https://newsapi.org/)를 axios를 이용해서 불러온 후 vue를 통해서 보여줍니다. 가져온 데이터 중에 이미지가 없는 것들은 대체 이미지를 넣어서 보여주고 있습니다.  
