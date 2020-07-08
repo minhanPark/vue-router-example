@@ -1,9 +1,12 @@
 <template>
-  <div>최신뉴스</div>
+  <div class="wrapper">
+    <NewsItem v-for="data in datas" v-bind:key="data.url" v-bind="data"></NewsItem>
+  </div>
 </template>
 
 <script>
 import { getLatestNews } from "../api";
+import NewsItem from "../components/NewsItem";
 
 export default {
   data() {
@@ -14,8 +17,15 @@ export default {
   async created() {
     const datas = await getLatestNews();
     this.datas = datas;
+  },
+  components: {
+    NewsItem: NewsItem
   }
 };
 </script>
 
-<style></style>
+<style scoped>
+.wrapper {
+  padding: 1rem;
+}
+</style>
