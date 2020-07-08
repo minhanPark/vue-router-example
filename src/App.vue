@@ -1,16 +1,24 @@
 <template>
   <div id="app">
     <div>
-      <router-link to="/">최신뉴스 보기</router-link>
-      <router-link to="/search">뉴스 검색하기</router-link>
+      <Header></Header>
     </div>
     <router-view></router-view>
   </div>
 </template>
 
 <script>
-export default {};
+import Header from "./components/Header";
+export default {
+  components: {
+    Header: Header
+  }
+};
 </script>
 
 <style>
+body {
+  margin: 0;
+  background-color: #ecf0f1;
+}
 </style>
