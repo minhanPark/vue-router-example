@@ -15,8 +15,12 @@ export default {
     };
   },
   async created() {
-    const datas = await getLatestNews();
-    this.datas = datas;
+    try {
+      const datas = await getLatestNews();
+      this.datas = datas;
+    } catch (e) {
+      this.datas = [];
+    }
   },
   components: {
     NewsItem: NewsItem

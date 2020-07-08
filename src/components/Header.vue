@@ -30,6 +30,8 @@ export default {};
   width: 100%;
   max-width: 1100px;
   display: flex;
+  height: 60px;
+  align-items: center;
 }
 h1 {
   color: #bdc3c7;

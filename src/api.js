@@ -19,3 +19,5 @@ export const getSearchNews = async keyword => {
   );
   return articles;
 };
+// https://newsapi.org/v2/everything?q=&apiKey=c2b0496873fe4f9c8a54ec24009b07e5
+// status: error
